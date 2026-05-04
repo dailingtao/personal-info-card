@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (decoded && decoded.name && decoded.age) {
       updateDisplay(decoded.name, decoded.age);
       document.body.classList.add('hide-controls');
+      document.body.classList.add('show-background-hint');
     }
   }
   
