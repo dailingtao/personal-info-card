@@ -218,13 +218,115 @@ body {
   height: 180px;
 }
 
-@media (max-width: 480px) {
-  .card, .controls {
-    padding: 25px 20px;
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 100%;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 35px 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .avatar svg {
+    width: 40px;
+    height: 40px;
   }
   
   .name {
-    font-size: 24px;
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  
+  .age {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    padding: 25px 20px;
+  }
+  
+  .controls h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    padding: 16px;
+    font-size: 16px;
+  }
+  
+  .share-section {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+  
+  .share-link input {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+  
+  #qrcode img {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .background-hint {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 25px 15px;
+  }
+  
+  .avatar {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+  }
+  
+  .avatar svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .name {
+    font-size: 22px;
+  }
+  
+  .age {
+    font-size: 15px;
+  }
+  
+  .controls {
+    padding: 20px 15px;
+  }
+  
+  .btn {
+    padding: 15px;
   }
 }
 
