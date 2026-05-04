@@ -29,7 +29,10 @@ function updateDisplay(name, age) {
   document.getElementById('name').textContent = name;
   document.getElementById('age').textContent = `年龄：${age}`;
   currentShareUrl = generateShareUrl(name, age);
-  document.getElementById('shareUrl').value = currentShareUrl;
+  const shareUrlInput = document.getElementById('shareUrl');
+  if (shareUrlInput) {
+    shareUrlInput.value = currentShareUrl;
+  }
 }
 
 function generateQRCode(url) {
