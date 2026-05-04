@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人信息卡片</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <h1 class="name" id="name">请设置姓名</h1>
+      <p class="age" id="age">年龄：--</p>
+    </div>
+
+    <div class="controls" id="controls">
+      <h2>配置信息</h2>
+      <form id="configForm">
+        <div class="form-group">
+          <label>姓名</label>
+          <input type="text" id="inputName" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+          <label>年龄</label>
+          <input type="number" id="inputAge" placeholder="请输入年龄" min="1" max="150">
+        </div>
+        <button type="submit" class="btn">生成链接</button>
+      </form>
+      
+      <div class="share-section" id="shareSection" style="display: none;">
+        <h3>分享方式</h3>
+        
+        <div class="share-link">
+          <label>分享链接</label>
+          <input type="text" id="shareUrl" readonly>
+          <button class="btn btn-secondary copy-btn" id="copyBtn">复制链接</button>
+        </div>
+        
+        <div class="qr-section">
+          <label>分享二维码</label>
+          <div id="qrcode"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
